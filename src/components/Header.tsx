@@ -3,7 +3,6 @@ const Header: React.FC = () => {
     <header className="header">
       <div className="container header-content">
         <div className="logo">
-          {/* You might use an actual SVG or image here */}
           <span className="logo-icon">📚</span> LearnHub
         </div>
         <nav className="nav">
