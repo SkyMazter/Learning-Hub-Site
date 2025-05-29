@@ -3,7 +3,7 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import SubjectCard from './components/SubjectCard';
 
-// Import your subject icons (replace with actual paths)
+// Import your subject icons
 import dockerIcon from './assets/docker.png';
 import blenderIcon from './assets/blender.png';
 import linuxIcon from './assets/linux.png';
@@ -26,22 +26,23 @@ function App() {
           <SubjectCard
             icon={blenderIcon}
             title="Blender"
+            isComingSoon
             description="Discover the basics of 3D modeling"
           />
           <SubjectCard
             icon={linuxIcon}
             title="Linux"
+            isComingSoon
             description="Understand how to install and run Linux Distros"
           />
           <SubjectCard
             icon={gitIcon}
             title="Git"
             description="Learn version control and collaboration"
+            isComingSoon
           />
         </div>
       </section>
-
-      {/* Add more sections as needed */}
     </div>
   );
 }
