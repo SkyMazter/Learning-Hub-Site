@@ -1,0 +1,25 @@
+:root {
+  --primary-color: #38b2ac; /* A teal/mint green */
+  --secondary-color: #f0f4f8; /* Light gray for backgrounds */
+  --tertiary-color: #3f8567; /* Forest Green for accents */
+  --text-color: #333;
+  --header-bg: #fff;
+  --card-bg: #fff;
+  --border-radius: 8px;
+  --padding-lg: 40px;
+  --padding-md: 20px;
+  --padding-sm: 15px;
+}
+
+@keyframes blinking {
+  from {
+    color: var(--secondary-color);
+  }
+  to {
+    color: transparent;
+  }
+}
+
+.animate-blinking {
+  animation: blinking 1s infinite both;
+}

@@ -1,7 +1,9 @@
 :root {
   --primary-color: #38b2ac; /* A teal/mint green */
   --secondary-color: #f0f4f8; /* Light gray for backgrounds */
+  --tertiary-color: #3f8567; /* Forest Green for accents */
   --text-color: #333;
+  --deactivated-color: #a4a4a4ae;
   --header-bg: #fff;
   --card-bg: #fff;
   --border-radius: 8px;
@@ -24,6 +26,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--padding-md);
+  padding-bottom: 0;
 }
 
 /* Header */
@@ -101,6 +104,7 @@ body {
   color: #555;
   max-width: 700px;
   margin: 0 auto 30px auto;
+  text-align: start;
 }
 
 /* Buttons */
@@ -122,8 +126,13 @@ body {
 }
 
 .primary-btn:hover {
-  background-color: #2c9797;
+  background-color: var(--primary-color);
   transform: translateY(-2px);
+}
+
+.primary-btn:active {
+  background-color: var(--tertiary-color);
+  transform: translateY(1px);
 }
 
 .secondary-btn {
@@ -136,6 +145,17 @@ body {
   background-color: var(--primary-color);
   color: #fff;
   transform: translateY(-2px);
+}
+
+.secondary-btn:active {
+  background-color: var(--tertiary-color);
+  transform: translateY(1px);
+}
+
+.deactivated-btn {
+  background-color: var(--deactivated-color);
+  color: white;
+  border: none;
 }
 
 /* Subjects Section */
@@ -200,21 +220,65 @@ body {
   display: flex;
   width: 100%;
   justify-content: start;
-  
 }
 
-.tag{
-  background-color: grey;
+.tag {
+  background-color: var(--deactivated-color);
   color: white;
   padding: 2px;
   padding-left: 4px;
   padding-right: 4px;
   border-radius: var(--border-radius);
-  font-size: 0.7rem
+  font-size: 0.7rem;
 }
-.hero-content p{
-  text-align: start;
+
+/*Footer Section*/
+.footer {
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  padding: var(--padding-lg);
+  padding-bottom: 10%;
 }
+
+.footer > .one > h1 {
+  font-size: xx-large;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  box-shadow: var(--primary-color) 2px 3px 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: var(--border-radius);
+}
+
+.footer > .two {
+  width: 50%;
+}
+
+.footer > .three > p {
+  text-align: end;
+  font-size: x-large;
+}
+
+.footer > .three > p:hover > * {
+  text-decoration: dashed;
+
+  color: var(--primary-color);
+}
+
+.footer > .three > p > * {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.footer > div > * {
+  margin: 0;
+  font-size: large;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .nav {
@@ -235,5 +299,25 @@ body {
 
   .subject-cards-grid {
     grid-template-columns: 1fr; /* Stack cards on very small screens */
+    padding: 10%;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer > div {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .footer > .two {
+    width: 100%;
+  }
+  .footer > .three {
+    padding-bottom: 40%;
+  }
+  .footer > div > h1 {
+    width: fit-content;
   }
 }

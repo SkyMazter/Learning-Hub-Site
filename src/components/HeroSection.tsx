@@ -1,4 +1,12 @@
-const HeroSection: React.FC = () => {
+import { useNavigate } from "react-router-dom";
+
+const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (): void => {
+    navigate("mission/");
+  };
+
   return (
     <section className="hero-section">
       <div className="container hero-content">
@@ -13,11 +21,13 @@ const HeroSection: React.FC = () => {
         </p>
 
         <p>
-          My mission is to share distilled, real-world knowledge and personal
-          learnings, ensuring that aspiring programmers gain a holistic
-          understanding of the development landscape from day one.
+          My mission is to share distilled, real-world knowledge, ensuring that
+          aspiring programmers gain a holistic understanding of the development
+          landscape from day one.
         </p>
-        <button className="btn primary-btn">Explore Subjects</button>
+        <button onClick={handleClick} className="btn primary-btn">
+          About Me
+        </button>
       </div>
     </section>
   );

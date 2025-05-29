@@ -1,4 +1,6 @@
-const Header: React.FC = () => {
+import { Link } from "react-router-dom";
+
+const Header = () => {
   return (
     <header className="header">
       <div className="container header-content">
@@ -8,16 +10,16 @@ const Header: React.FC = () => {
         <nav className="nav">
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <Link to={"/Open-Notes"}>Home</Link>
             </li>
             <li>
-              <a href="#subjects">Subjects</a>
+              <Link to={"/Open-Notes"}>Subjects</Link>
             </li>
             <li>
-              <a href="#about">About</a>
+              <Link to={"mission/"}>About</Link>
             </li>
             <li>
-              <a href="#feedback">Feedback</a>
+              <Link to={"/Open-Notes"}>Feedback</Link>
             </li>
           </ul>
         </nav>
