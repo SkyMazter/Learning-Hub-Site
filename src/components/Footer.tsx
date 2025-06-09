@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
       <div className="three">
         <p>
-          <Link to={"https://skymazter.github.io/"}>Oscar Comunidad</Link>
+          <a href="https://skymazter.github.io/">Oscar Comunidad</a>
         </p>
         <p>
           <Link to={"https://www.linkedin.com/in/oscar-comunidad-90b224168/"}>
